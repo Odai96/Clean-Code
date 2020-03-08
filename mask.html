@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Copy Chars</h1>
+
+<form action="/action_page.php">
+  <label for="fname">input1:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">input2:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+</form>
+</body>
+</html>
+<script>
+function unmask(selector1,selector2)
+{
+    const input1 = document.querySelector(selector1);
+    const input2 = document.querySelector(selector2);
+    input1.addEventListener('input', updateValue);
+    function updateValue(e)
+     {
+        input2.value = e.target.value;
+     }
+}
+</script>
